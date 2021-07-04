@@ -29,6 +29,7 @@ import android.view.Display.HdrCapabilities;
 
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
+import org.lineageos.settings.touchsampling.TouchSamplingUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
@@ -64,6 +65,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     private void handleBootCompleted(Context context) {
         if (DEBUG) Log.i(TAG, "Handling boot completed.");
         // Add additional boot-completed actions if needed
+
+        // High Touch polling rate
+        TouchSamplingUtils.restoreSamplingValue(context);
+
     }
 
     private void startServices(Context context) {
