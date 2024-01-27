@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "DolbyOverlayPeridot",
+    product_specific: true,
+}

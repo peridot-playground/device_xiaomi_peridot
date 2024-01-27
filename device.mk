@@ -432,6 +432,7 @@ PRODUCT_PACKAGES += \
     ApertureOverlayPeridot \
     CarrierConfigOverlayPeridot \
     FrameworkOverlayPeridot \
+    DolbyOverlayPeridot \
     LineageSDKOverlayPeridot \
     SecureElementOverlayPeridot \
     SettingsOverlayPeridot \
