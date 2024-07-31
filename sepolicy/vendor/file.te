@@ -1,4 +1,5 @@
 type adsprpcd, domain;
+type smartpa_type, fs_type, sysfs_type;
 type sysfs_therm, fs_type, sysfs_type;
 type vendor_sysfs_displayfeature, fs_type, sysfs_type;
 type sysfs_touchpanel, fs_type, sysfs_type;
