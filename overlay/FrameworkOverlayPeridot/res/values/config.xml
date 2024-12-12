@@ -1064,4 +1064,6 @@
          <item>0</item>
      </integer-array>
      
+    <!-- PowerOffAlarmService -->
+    <bool name="config_powerOffAlarmEnabled">true</bool>
 </resources>
