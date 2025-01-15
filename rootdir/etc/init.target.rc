@@ -451,6 +451,10 @@ on boot
     chown system system /sys/devices/platform/goodix_ts.0/switch_report_rate
     chmod 0664 /sys/devices/platform/goodix_ts.0/switch_report_rate
 
+    # Allow system to manipulate Fast Charge node
+    chown system system /sys/class/qcom-battery/sport_mode
+    chmod 0660 /sys/class/qcom-battery/sport_mode
+
 on init && property:ro.boot.mode=charger
     wait_for_prop vendor.all.modules.ready 1
     mount_all /vendor/etc/charger_fw_fstab.qti --early
