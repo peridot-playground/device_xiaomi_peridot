@@ -247,6 +247,8 @@ on boot
     # MIUI ADD: Power_LogEnhance
     # Allow access to power_debug
     chown system system /sys/class/power_debug/debug_suspend
+    chown system system /sys/class/power_debug/temp_aware
+    chown system system /sys/class/mi_power/temp_aware
     # END Power_LogEnhance
 
      # MIUI ADD: Performance_LogEnhance
@@ -254,6 +256,12 @@ on boot
     chown system system /proc/mi_log/binder_delay
     chown system system /proc/mi_log/delay
     # END Performance_LogEnhance
+
+    # MIUI ADD: Performance_UnfairMem
+    chmod 0666 /dev/mi_mem_engine
+    chown system root /proc/mi_mem_engine/scene_tid
+    chmod 0664 /dev/mi_mem_engine/scene_tid
+    # END Performance_UnfairMem
 
     # Create directory used for display
     # for backward compatibility
@@ -263,6 +271,8 @@ on boot
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
+    # Create hexlp directory
+    mkdir /mnt/vendor/persist/hexlp 0770 media media
 
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
@@ -340,6 +350,12 @@ on post-fs-data
 
     # Create directory used by video subsystem
     mkdir /data/vendor/video 0777 audio audio
+    write /data/vendor/video/videohalPid 0
+    chown audio audio /data/vendor/video/videohalPid
+    chmod 0777 /data/vendor/video/videohalPid
+    write /data/vendor/video/vppservicePid 0
+    chown audio audio /data/vendor/video/vppservicePid
+    chmod 0777 /data/vendor/video/vppservicePid
 
     # Create directory for audio delta files
     mkdir /data/vendor/audio/acdbdata 0770 media audio
@@ -451,6 +467,9 @@ on post-fs-data
 
     # Create vpp directory
     mkdir /data/vendor/vpp 0770 media media
+
+    # Create hexlp directory
+    mkdir /data/vendor/hexlp 0770 media media
 
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
