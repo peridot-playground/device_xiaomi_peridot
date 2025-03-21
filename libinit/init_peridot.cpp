@@ -67,22 +67,22 @@ void vendor_load_properties() {
     if (region == "IN") {
         device = "peridot";
         brand = "POCO";
-        description = "peridot_global-user 14 UKQ1.240116.001 V816.0.12.0.UNPMIXM release-keys";
-        fingerprint = "POCO/peridot_global/peridot:14/UKQ1.240116.001/V816.0.12.0.UNPMIXM:user/release-keys";
+        description = "peridot_global-user 15 AQ3A.240912.001 OS2.0.100.0.VNPMIXM release-keys";
+        fingerprint = "POCO/peridot_global/peridot:15/AQ3A.240912.001/OS2.0.100.0.VNPMIXM:user/release-keys";
         marketname = "POCO F6";
         model = "24069PC21I";
     } else if (region == "GL") {
         device = "peridot";
         brand = "POCO";
-        description = "peridot_global-user 14 UKQ1.240116.001 V816.0.12.0.UNPMIXM release-keys";
-        fingerprint = "POCO/peridot_global/peridot:14/UKQ1.240116.001/V816.0.12.0.UNPMIXM:user/release-keys";
+        description = "peridot_global-user 15 AQ3A.240912.001 OS2.0.100.0.VNPMIXM release-keys";
+        fingerprint = "POCO/peridot_global/peridot:15/AQ3A.240912.001/OS2.0.100.0.VNPMIXM:user/release-keys";
         marketname = "POCO F6";
         model = "24069PC21G";
     } else if (region == "CN") {
         device = "peridot";
         brand = "Redmi";
-        description = "peridot-user 14 UKQ1.240116.001 V816.0.18.0.UNPCNXM release-keys";
-        fingerprint = "Redmi/peridot/peridot:14/UKQ1.240116.001/V816.0.18.0.UNPCNXM:user/release-keys";
+        description = "peridot-user 15 AQ3A.240912.001 OS2.0.101.0.VNPCNXM release-keys";
+        fingerprint = "Redmi/peridot/peridot:15/AQ3A.240912.001/OS2.0.101.0.VNPCNXM:user/release-keys";
         marketname = "Redmi Turbo 3";
         model = "24069RA21C";
     }
