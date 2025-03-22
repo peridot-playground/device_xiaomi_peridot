@@ -1,0 +1,13 @@
+cc_library_shared {
+    name: "libwrapper_dlengine_shim",
+    srcs: [
+          "libwrapper_dlengine_shim.cpp",
+    ],
+    shared_libs: [
+          "libc",
+          "libdl",
+          "libm",
+    ],
+
+    vendor_available: true,
+}
