@@ -57,7 +57,8 @@ PRODUCT_PACKAGES += \
     audio.primary.pineapple \
     audio.bluetooth.default \
     audio.r_submix.default \
-    audio.usb.default
+    audio.usb.default \
+    sound_trigger.primary.pineapple
 
 PRODUCT_PACKAGES += \
     libagm_compress_plugin \
