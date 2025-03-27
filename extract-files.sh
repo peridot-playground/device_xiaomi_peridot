@@ -93,13 +93,17 @@ function blob_fixup() {
             sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio)/d" "${2}"
             ;;
         vendor/lib64/libqcodec2_core.so)
-	    [ "$2" = "" ] && return 0
+	        [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libcodec2_shim.so" "${2}"
             ;;
         vendor/lib64/libqcrilNr.so|vendor/lib64/libril-db.so)
             [ "$2" = "" ] && return 0
             sed -i "s/persist.vendor.radio.poweron_opt/persist.vendor.radio.poweron_ign/" "${2}"
             ;;
+        vendor/bin/hw/vendor.dolby.media.c2@1.0-service | vendor/bin/hw/vendor.qti.media.c2@1.0-service | vendor/bin/hw/vendor.qti.media.c2audio@1.0-service)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libcodec2_hidl_shim.so" "${2}"
+            ;;    
         vendor/lib64/vendor.libdpmframework.so)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF_0_17_2}" --add-needed "libhidlbase_shim.so" "${2}"
