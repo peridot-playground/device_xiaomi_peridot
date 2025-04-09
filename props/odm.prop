@@ -81,7 +81,6 @@ ro.telephony.default_network=33,33
 
 # SKU
 ro.product.property_source_order=odm,vendor,product,system_ext,system
-import /odm/etc/odm_${ro.boot.hwc}.prop
 
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
