@@ -38,6 +38,7 @@ import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.touchsampling.TouchSamplingUtils;
 import org.lineageos.settings.touchsampling.TouchSamplingService;
 import org.lineageos.settings.touchsampling.TouchSamplingTileService;
+import org.lineageos.settings.turbocharging.TurboChargingService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
@@ -97,6 +98,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Touch Sampling Tile Service
         context.startServiceAsUser(new Intent(context, TouchSamplingTileService.class), 
+                UserHandle.CURRENT);
+                
+        // TurboChargingService
+        context.startServiceAsUser(new Intent(context, TurboChargingService.class),
                 UserHandle.CURRENT);
     }
 
