@@ -40,15 +40,7 @@
          </interface>
     </hal>
     <hal format="aidl" optional="true">
-        <name>android.hardware.vibrator</name>
-        <version>1</version>
-        <interface>
-            <name>IVibrator</name>
-            <instance>vibratorfeature</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-       <name>com.fingerprints.extension3</name>
+        <name>com.fingerprints.extension3</name>
         <interface>
             <name>IFingerprintNavigation</name>
             <instance>default</instance>

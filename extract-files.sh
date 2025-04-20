@@ -92,10 +92,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio)/d" "${2}"
             ;;
-        vendor/etc/init/vendor.xiaomi.hardware.vibratorfeature.service.rc)
-            [ "$2" = "" ] && return 0
-            sed -i "s/\/odm\/bin\//\/vendor\/bin\//g" "${2}"
-            ;;
         vendor/lib64/libqcodec2_core.so)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libcodec2_shim.so" "${2}"
