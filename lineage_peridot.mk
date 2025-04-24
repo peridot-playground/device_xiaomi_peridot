@@ -24,8 +24,8 @@ PRODUCT_BRAND := POCO
 PRODUCT_MODEL := 24069PC21G
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="peridot_global-user 15 AQ3A.240912.001 OS2.0.100.0.VNPMIXM release-keys" \
-    BuildFingerprint=POCO/peridot_global/peridot:15/AQ3A.240912.001/OS2.0.100.0.VNPMIXM:user/release-keys \
+    BuildDesc="peridot_global-user 15 AQ3A.240912.001 OS2.0.102.0.VNPMIXM release-keys" \
+    BuildFingerprint=POCO/peridot_global/peridot:15/AQ3A.240912.001/OS2.0.102.0.VNPMIXM:user/release-keys \
     DeviceName=peridot
     DeviceProduct=peridot_global \
     SystemName=peridot_global \
