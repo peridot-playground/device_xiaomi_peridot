@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common "ROM" stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from peridot device
@@ -32,3 +32,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemDevice=peridot
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# ROM Flags
+TARGET_BOOT_ANIMATION_RES := 1080
+HORIZON_BUILD_TYPE := UNOFFICIAL
+HORIZON_MAINTAINER := spesmynuts
+WITH_GMS := true
