@@ -33,11 +33,16 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=peridot_global \
     SystemName=peridot_global \
     SystemDevice=peridot
+    RisingChipset="Qualcomm Snapdragon 8s Gen 3" \
+    RisingMaintainer="@spesmynuts"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # ROM Flags
 TARGET_BOOT_ANIMATION_RES := 1080
-HORIZON_BUILD_TYPE := UNOFFICIAL
-HORIZON_MAINTAINER := spesmynuts
 WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_INCLUDE_GOOGLE_DIALER := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+TARGET_HAS_UDFPS := false
+TARGET_ENABLE_BLUR := true
